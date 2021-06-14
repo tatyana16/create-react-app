@@ -1,12 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import Welcome from "./components/Welcome/Welcome";
+import Person from "./components/Person/Person";
 
-export default class Welcome extends Component {
+export default class App extends Component {
   render() {
     return (
       <div>
-        Welcome to the Amex Bootcamp!
+        My App
+        <Welcome />
+        <Person firstName={"Tatyana"} lastName={"Alexander"} />
       </div>
-    )
+    );
   }
 }
-
