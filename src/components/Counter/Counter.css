@@ -1,3 +1,10 @@
-.Counter-container {
-    color: orange; 
+
+  .Counter-active {
+    color: red;
+  }
+  .Counter-low {
+    color:green;
+  }
+  .ResetBtnClass{
+    display:none;
   }
