@@ -5,22 +5,34 @@ export default class ContactForm extends Component {
     super(props);
 
     this.state = {
-      firstName: "Tatyana",
-      lastName: "Alexander",
-      email: "tatyana.theresa@gmail.com",
-      message: "message",
+      firstName: "",
+      lastName: "",
+      email: "",
+      message: "",
     };
   }
+
+  handleFirstNameChange = (event) => {
+    this.setState({
+      firstName: event.target.value, // grab the value from the first name input field
+    });
+  };
 
   render() {
     return (
       <div>
-        <h1>Tatyana's Contact Form</h1>
+        <h1>{this.state.firstName}</h1>
         <form>
           <ul>
             <li>
               <label htmlFor="firstName">First Name:</label>
-              <input type="text" id="firstName" name="firstName" />
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                value={this.state.firstName}
+                onChange={this.handleFirstNameChange}
+              />
             </li>
             <li>
               <label htmlFor="lastName">Last Name:</label>
